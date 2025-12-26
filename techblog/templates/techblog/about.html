@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Про нас{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <h1 class="page-title">Про TechBlog: </h1>
+    <p class="page-subtitle">
+        Ми команда....
+    </p>
+
+    <div class="team">
+        {% for member in team %}
+            <div class="team-card">
+                <div class="team-name">{{ member.name }}</div>
+                <div class="team-role">{{ member.role }}</div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
